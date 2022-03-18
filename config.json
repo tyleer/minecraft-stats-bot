@@ -1,0 +1,11 @@
+{
+    "token": "token",
+
+    "ipAddress": "sunucu ipsi",
+    "port": "25565",
+    "playersChannel": "oyuncu sayısını göstericek olan kanalın idsi",
+    "statusChannel": "aktif/kapalı durumunu göstericek olan kanalın idsi",
+    "updateInterval": "30sec",
+
+    "prefix": "!"
+}

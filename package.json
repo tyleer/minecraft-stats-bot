@@ -1,0 +1,21 @@
+{
+  "name": "tyler-bot",
+  "version": "1.3.1",
+  "description": "Minecraft Sunucuları için yapılan bir istatistik botu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "mc"
+  ],
+  "author": "tyler/dram",
+  "dependencies": {
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.3",
+    "mineflayer": "^3.6.0",
+    "mineflayer-cmd": "^1.1.3",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.6.1"
+  }
+}
