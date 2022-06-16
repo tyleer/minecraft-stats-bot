@@ -23,6 +23,9 @@ const updateChannel = async () => {
 
 
     const players = body.players.now
+    const serverAd = config.serverAD
+
+    client.user.setActivity(players + " kişi " + serverAd);
 
 
     const status = (body.online ? "Aktif" : "Kapalı")
