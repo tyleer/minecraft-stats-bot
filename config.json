@@ -6,6 +6,7 @@
     "playersChannel": "oyuncu sayısını göstericek olan kanalın idsi",
     "statusChannel": "aktif/kapalı durumunu göstericek olan kanalın idsi",
     "updateInterval": "30sec",
+    "serverAD": "sunucunuzun adı",
 
     "prefix": "!"
 }
