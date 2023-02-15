@@ -6,6 +6,6 @@
 
 **NOT!** *config.json* dosyasındaki **updateInterval** kısmını değiştirerek odaların güncellenme süresini değiştirebilirsiniz. Default: 5dk(300.000ms).
 
-**Port** kısmını kendi sunucunuzun portu, farklıysa değiştirebilirsiniz.
+**Port** kısmını kendi sunucunuzun portudur, sizinki farklıysa değiştirebilirsiniz.
 
 **Bana ulaşmak için** [umuttd3v#2907](https://discord.com/users/423918142385815552)
