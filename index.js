@@ -80,7 +80,6 @@ client.on('message', async (message) => {
             .setFooter(`${message.author.username} tarafından istendi`)
             .setColor("#FF0000")
 
-
         istatistikmsg.edit(`:chart_with_upwards_trend: İşte **${config.ipAddress}** istatistikleri:`, { embed })
     }
 
