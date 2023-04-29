@@ -5,6 +5,7 @@
     "port": "25565",
     "playersChannel": "oyuncu sayısını göstericek olan kanalın idsi",
     "statusChannel": "aktif/kapalı durumunu göstericek olan kanalın idsi",
+    "voteChannel": "oy sayısını gösterecek kanal id",
     "updateInterval": "30sec",
     "serverAD": "sunucunuzun adı",
     "mcmp_key": "server api key giriniz",
