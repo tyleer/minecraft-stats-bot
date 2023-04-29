@@ -1,6 +1,6 @@
 title bot
 echo off
-title dc.umutt.xyz
+title github.com/tyleer
 cls
 :a
 node index.js
