@@ -6,7 +6,7 @@
 
 **NOT!** *config.json* dosyasındaki **updateInterval** kısmını değiştirerek odaların güncellenme süresini değiştirebilirsiniz. Default: 5dk(300.000ms).
 
-**Port** kısmını kendi sunucunuzun portudur, sizinki farklıysa değiştirebilirsiniz.
+**Port** kısmını sizinki farklıysa değiştirebilirsiniz. Default: 25565
 
 **MCMP_KEY** almak için [buraya](https://minecraft-mp.com/servers/manage/) tıklayıp, açılan sayfada **Server API Key** karşısındaki anahtarı alınız.
 
