@@ -8,16 +8,10 @@ require('discord-reply');
 
 const config = require('./config.json')
 
-
 const updateChannel = async () => {
 
     const mcmp = await fetch(`https://minecraft-mp.com/api/?object=servers&element=detail&key=${config.mcmp_key}`)
-    const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}` || `https://minecraft-mp.com/api/?object=servers&element=detail&key=${config.mcmp_key}`)
-    if (!res) {
-        const statusChannelName = `📡︲Durum:`
-        client.channels.cache.get(config.statusChannel).setName(statusChannelName)
-        return false
-    }
+    const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}`)
 
     const body = await res.json()
     const players = body.players.now
