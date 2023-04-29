@@ -83,6 +83,27 @@ client.on('message', async (message) => {
         istatistikmsg.edit(`:chart_with_upwards_trend: İşte **${config.ipAddress}** istatistikleri:`, { embed })
     }
 
-})
+    
+    if (message.content === `${config.prefix}oybilgi`) {
+        const istatistikmsg = await message.lineReply("İstatistikler toplanıyor lütfen bekleyin...")
+
+        const res = await fetch(`https://minecraft-mp.com/api/?object=servers&element=detail&key=${config.mcmp_key}`)
+        if (!res) return message.channel.send(`Görünüşe göre sunucunuza erişilemiyor. Lütfen çevrimiçi olduğunu ve erişimi engellemediğini onaylayın.`)
+        
+        const body = await res.json()
+        const embed = new Discord.MessageEmbed()
+            .setAuthor(body.address)
+            .setThumbnail(body.banner_url)
+            .addField("Rank", body.rank)
+            .addField("Toplam Oy", body.votes)
+            .addField("Favoriler", body.favorited)
+            .setThumbnail(message.author.avatarURL({ dynamic: true }))
+            .setFooter(`Veriler Minecraft-MP sitesine aittir`)
+            .setColor("#FF0000")
+
+        istatistikmsg.edit(`:chart_with_upwards_trend: İşte **${config.ipAddress}** oy istatistikleri:`, { embed })
+    }
+    
+});
 
 client.login(config.token)
