@@ -7,7 +7,7 @@
     "statusChannel": "aktif/kapalı durumunu göstericek olan kanalın idsi",
     "updateInterval": "30sec",
     "serverAD": "sunucunuzun adı",
-    "mcmp_key": "ow9vqwHmhxIeUWwEJ5VpdKAweiKBHdPrQUc",
+    "mcmp_key": "server api key giriniz",
 
     "prefix": "!"
 }
