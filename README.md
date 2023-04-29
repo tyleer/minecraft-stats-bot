@@ -4,7 +4,7 @@
 - **config.json** dosyasına giderek belirtilen yerleri doldurunuz.
 - Ardından klasördeki **baslat.bat** dosyasını açarak botu çalıştırabilirsiniz. 
 
-**NOT!** config.json dosyasındaki **updateInterval** kısmını değiştirerek odaların güncellenme süresini değiştirebilirsiniz. Default: 5dk(300.000ms).
+**NOT!** config.json dosyasındaki **updateInterval** kısmını değiştirerek odaların güncellenme süresini değiştirebilirsiniz. Default: 30sec
 
 **Port** kısmını sizinki farklıysa değiştirebilirsiniz. Default: 25565
 
