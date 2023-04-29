@@ -11,8 +11,8 @@ const config = require('./config.json')
 
 const updateChannel = async () => {
 
-
-    const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}`)
+    const mcmp = await fetch(`https://minecraft-mp.com/api/?object=servers&element=detail&key=${config.mcmp_key}`)
+    const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}` || `https://minecraft-mp.com/api/?object=servers&element=detail&key=${config.mcmp_key}`)
     if (!res) {
         const statusChannelName = `📡︲Durum:`
         client.channels.cache.get(config.statusChannel).setName(statusChannelName)
@@ -20,24 +20,23 @@ const updateChannel = async () => {
     }
 
     const body = await res.json()
-
-
     const players = body.players.now
     const serverAd = config.serverAD
+    const body1 = await mcmp.json()
+    const oySayisi = body1.votes
 
     client.user.setActivity(players + " kişi " + serverAd);
-
-
     const status = (body.online ? "Aktif" : "Kapalı")
-
 
     const playersChannelName = `👥︲Oyuncular: ${players}`
     const statusChannelName = `📡︲Durum: ${status}`
-
+    const voteChannelName = `📊︲Oylar: ${oySayisi}`
 
     client.channels.cache.get(config.playersChannel).setName(playersChannelName)
     client.channels.cache.get(config.statusChannel).setName(statusChannelName)
+    client.channels.cache.get(config.voteChannel).setName(voteChannelName)
 
+    console.log("Kanallar güncellendi")
     return true
 }
 
@@ -62,7 +61,6 @@ client.on('message', async (message) => {
     if (message.content === `${config.prefix}durum`) {
         const istatistikmsg = await message.lineReply("İstatistikler toplanıyor lütfen bekleyin...")
 
-
         const res = await fetch(`https://mcapi.us/server/status?ip=${config.ipAddress}${config.port ? `&port=${config.port}` : ''}`)
         if (!res) return message.channel.send(`Görünüşe göre sunucunuza erişilemiyor. Lütfen çevrimiçi olduğunu ve erişimi engellemediğini onaylayın.`)
 
@@ -83,7 +81,6 @@ client.on('message', async (message) => {
         istatistikmsg.edit(`:chart_with_upwards_trend: İşte **${config.ipAddress}** istatistikleri:`, { embed })
     }
 
-    
     if (message.content === `${config.prefix}oybilgi`) {
         const istatistikmsg = await message.lineReply("İstatistikler toplanıyor lütfen bekleyin...")
 
