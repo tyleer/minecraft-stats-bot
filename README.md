@@ -11,3 +11,6 @@
 **MCMP_KEY** almak için [buraya](https://minecraft-mp.com/servers/manage/) tıklayıp, açılan sayfada **Server API Key** karşısındaki anahtarı alınız.
 
 **Bana ulaşmak için** [umuttd3v](https://discord.com/users/423918142385815552)
+
+## Lisans
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
